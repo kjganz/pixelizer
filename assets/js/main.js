@@ -20,8 +20,6 @@ function displayImage() {
 
     canvas.width = img.width;
     canvas.height = img.height;
-
-    ctx.drawImage(this, 0, 0, canvas.width, canvas.height);
     pixel_input.addEventListener('change', pixelateImage, false);
     pixelateImage();
   };
@@ -33,6 +31,7 @@ function displayImage() {
 function pixelateImage() {
   var pixel_size = parseInt(pixel_input.value, 10);
   var ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
   // No need to do any pixelization if pixel size is 1
