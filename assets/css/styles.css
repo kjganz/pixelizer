@@ -47,15 +47,65 @@ table {
 }
 
 html, body {
+  height: 100%;
   background: #9B9298;
   font-family: 'Roboto', sans-serif;
 }
 
+img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  /*max-height: 100%;*/
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container {
+  margin: 1%;
+}
+
+input {
+  display: inline-block;
+}
+
+.slider-container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.range-value {
+  display: inline-block;
+  position: relative;
+  margin-left: 5px;
+  padding: 5px 10px;
+  color: white;
+  background-color: black;
+  border-radius: 3px;
+}
+
+.range-value:after {
+  position: absolute;
+  left: -5px;
+  top: calc(50% - 2px);
+  height: 5px;
+  width: 5px;
+  background-color: black;
+  content: '';
+}
 
 canvas {
+  margin: 1%;
   display: block;
-  margin: 0 auto;
-  padding: 0;
-  width: 90%;
+  max-height: 90%;
+  max-width: 100%;
 }
 

@@ -14,11 +14,17 @@
 
 
 <body>
-  <input type='file' accept='image/*' id='image-select'></input>
-  <input type='range' min='1' max='200' id='pixel-size'></input>
+  <div class='container'>
+    <div class='input-container'>
+      <input type='file' accept='image/*' id='image-select'></input>
+      <div class='slider-container'>
+        <input type='range' value='50' min='1' max='250' id='pixel-size'></input>
+        <div class='range-value' id='range-value'>50</div>
+      </div>
+    </div>
 
-  <canvas id='canvas'></canvas>
-
+    <canvas id='canvas'></canvas>
+  </div>
   <script src="assets/js/main.js"></script>
 </body>
 
